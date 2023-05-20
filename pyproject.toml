@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "Text adventure"
+version = "0.0.1"
+description = "A Game"
+authors = ["Gideon Felt <gideon@feltslanding.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.9.9"
+loguru = "0.5.3"
+rich = "11.2.0"
+
+[tool.poetry.extras]
+
+
+[tool.poetry.dev-dependencies]
+isort = "5.10.1"
+python-dotenv = "^0.19.2"
+mypy = "^0.931" # If I use mypyc in the future then this will be a main dependency not dev.
+pytest = "^6.2.5"
+setuptools = "60.5.0"
+yapf = "^0.32.0"
+
+
+[build-system]
+requires = ["poetry-core==1.1.12"]
+build-backend = "poetry.core.masonry.api"
+
+# TODO: create scripts to run/test/build each service.
+#[tool.poetry.scripts]
+#run_pdf_ingestion_service = "uvicorn esi_development/apps/controllers/pdf_ingestion/main.py --reload --port=8000"
+#rebuild_all_images = "cd esi_development/builds && docker-compose -f docker-compose.yml up --force-recreate"
